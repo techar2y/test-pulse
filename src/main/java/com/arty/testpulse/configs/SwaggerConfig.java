@@ -26,8 +26,8 @@ public class SwaggerConfig
 
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder().title("TestPulse API")
-                .description("TestPulse API reference for developers")
-                .contact(new Contact("name", "url", "email"))
-                .licenseUrl("a.yurchenko.r@gmail.com").version("1.0").build();
+                .description("TestPulse API reference for developers about employees")
+                .contact(new Contact("Artur", "example-url.com", "me@post.co"))
+                .licenseUrl("Apache 2.0").version("1.0").build();
     }
 }

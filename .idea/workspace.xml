@@ -2,19 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d864cd71-e574-4b46-9a5e-e97315ba815b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/arty/testpulse/configs/SwaggerConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/arty/testpulse/TestPulseApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/arty/testpulse/TestPulseApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/arty/testpulse/controllers/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/arty/testpulse/controllers/EmployeeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/arty/testpulse/domains/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/arty/testpulse/domains/Employee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/arty/testpulse/mappers/EmployeeMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/arty/testpulse/mappers/EmployeeMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/arty/testpulse/TestPulseApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/arty/testpulse/TestPulseApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/arty/testpulse/controllers/EmployeeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/arty/testpulse/controllers/EmployeeController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/arty/testpulse/domains/Employee.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/arty/testpulse/domains/Employee.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/arty/testpulse/mappers/EmployeeMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/arty/testpulse/mappers/EmployeeMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/arty/testpulse/configs/SwaggerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/arty/testpulse/configs/SwaggerConfig.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -155,7 +143,7 @@
       <workItem from="1631640893528" duration="7743000" />
       <workItem from="1631649797191" duration="10099000" />
       <workItem from="1631722441392" duration="6123000" />
-      <workItem from="1631736351285" duration="10757000" />
+      <workItem from="1631736351285" duration="11289000" />
     </task>
     <servers />
   </component>
