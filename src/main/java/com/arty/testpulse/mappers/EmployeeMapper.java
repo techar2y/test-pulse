@@ -10,21 +10,24 @@ import java.util.Map;
 
 public interface EmployeeMapper
 {
-    @Select("SELECT * FROM employees")
+    @Select("SELECT * " +
+            "FROM employees e JOIN departements d ON e.departement_id = d.id")
     List<Employee> getAll();
 
     /**
      * Средняя зарплата по компании
      * @return
      */
-    @Select("SELECT AVG(salary) as avgSalary FROM employees")
+    @Select("SELECT AVG(e.salary) as avgSalary " +
+            "FROM employees e JOIN departements d ON e.departement_id = d.id")
     Map<String, Object> getAvgCompanySalary();
 
     /**
      * Средняя заплата по отделу
      * @return
      */
-    @Select("SELECT AVG(salary) as avgSalary, departement FROM employees GROUP BY departement")
+    @Select("SELECT AVG(e.salary) as avgSalary, departement FROM employees e JOIN departements d ON e.departement_id = d.id " +
+            "GROUP BY departement")
     List<Map<String, Object>> getAvgDepartementSalary();
 
     /**

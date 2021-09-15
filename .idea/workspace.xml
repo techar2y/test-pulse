@@ -2,21 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d864cd71-e574-4b46-9a5e-e97315ba815b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/arty/testpulse/TestPulseApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/arty/testpulse/configs/PersistenceConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/arty/testpulse/controllers/EmployeeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/arty/testpulse/domains/AvgPositionSalary.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/arty/testpulse/domains/Employee.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/arty/testpulse/mappers/EmployeeMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/data.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/schema.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/arty/testpulse/configs/SwaggerConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/arty/testpulse/TestPulseApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/arty/testpulse/TestPulseApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/arty/testpulse/controllers/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/arty/testpulse/controllers/EmployeeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/arty/testpulse/domains/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/arty/testpulse/domains/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/arty/testpulse/mappers/EmployeeMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/arty/testpulse/mappers/EmployeeMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/arty/testpulse/TestPulseApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/arty/testpulse/TestPulseApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/arty/testpulse/controllers/EmployeeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/arty/testpulse/controllers/EmployeeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/arty/testpulse/domains/Employee.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/arty/testpulse/domains/Employee.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/arty/testpulse/mappers/EmployeeMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/arty/testpulse/mappers/EmployeeMapper.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -78,7 +76,7 @@
   <component name="ProjectId" id="1y8l2icbYTXRyHkuIAJV7TJ1D6K" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
-    <property name="DatabaseDriversLRU" value="h2" />
+    <property name="DatabaseDriversLRU" value="h2&#10;sqlserver" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
@@ -87,12 +85,20 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="H:\Java\testpulse\src\main\resources" />
     </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn install:install-file -Dfile=A:\Downloads\sqljdbc4-4.0.jar -DgroupId=com.microsoft.sqlserver \ -DartifactId=sqljdbc4 -Dversion=4.0 -Dpackaging=jar" />
+      <command value="mvn mvn install:install-file -Dfile=A:\Downloads\sqljdbc4-4.0.jar -DgroupId=com.microsoft.sqlserver -DartifactId=sqljdbc4 -Dversion=4.0 -Dpackaging=jar" />
+      <command value="mvn install:install-file -Dfile=A:\Downloads\sqljdbc4-4.0.jar -DgroupId=com.microsoft.sqlserver -DartifactId=sqljdbc4 -Dversion=4.0 -Dpackaging=jar" />
+    </option>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -111,7 +117,6 @@
       <module name="testpulse" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.arty.testpulse.TestPulseApplication" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="UPDATE_ACTION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -148,7 +153,9 @@
       <option name="presentableId" value="Default" />
       <updated>1631640890423</updated>
       <workItem from="1631640893528" duration="7743000" />
-      <workItem from="1631649797191" duration="8898000" />
+      <workItem from="1631649797191" duration="10099000" />
+      <workItem from="1631722441392" duration="6123000" />
+      <workItem from="1631736351285" duration="10757000" />
     </task>
     <servers />
   </component>

@@ -5,7 +5,8 @@ public class Employee
     private Long id;
     private String name;
     private String position;
-    private String departement;
+    private Integer departement_id;
+    private String departement_name;
     private Integer salary;
 
     public Long getId ()
@@ -38,14 +39,14 @@ public class Employee
         this.position = position;
     }
 
-    public String getDepartement ()
+    public Integer getDepartement_id ()
     {
-        return departement;
+        return departement_id;
     }
 
-    public void setDepartement (String departement)
+    public void setDepartement_id (Integer departement_id)
     {
-        this.departement = departement;
+        this.departement_id = departement_id;
     }
 
     public Integer getSalary ()
@@ -56,5 +57,15 @@ public class Employee
     public void setSalary (Integer salary)
     {
         this.salary = salary;
+    }
+
+    public String getDepartement_name ()
+    {
+        return departement_name;
+    }
+
+    public void setDepartement_name (String departement_name)
+    {
+        this.departement_name = departement_name;
     }
 }
