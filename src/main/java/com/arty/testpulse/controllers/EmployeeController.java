@@ -1,15 +1,15 @@
 package com.arty.testpulse.controllers;
 
 import com.arty.testpulse.domains.Employee;
-import com.arty.testpulse.mappers.EmployeeMapper;
+import com.arty.testpulse.services.IEmployeeService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -18,85 +18,62 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/api/employee")
-@Api(value = "/api/employee" , description = "Operation about employees" , tags = "Employees")
+@Api(value = "/api/employee" , description = "Operation about company employees", tags = "Employees")
 public class EmployeeController
 {
     @Autowired
-    EmployeeMapper employeeMapper;
+    IEmployeeService employeeService;
 
+    public String get(String name) {
+        return new StringBuilder(name + " me").toString();
+    }
 
-    @ApiOperation(value = "Find all employees",
+    @ApiOperation(value = "Get all employees",
             response = List.class,
             responseContainer = "ResponseEntity<List<Employee>>")
     @ApiResponses(value = {
             @ApiResponse(code = 500, message = "Internal server error"),
             @ApiResponse(code = 204, message = "No employees in database")
     })
-    @GetMapping("/getAll")
-    public ResponseEntity<List<Employee>> getAll() {
-        try {
-
-            List<Employee> employees = employeeMapper.getAll();
-            if(employees.size() == 0) {
-                return new ResponseEntity<>(HttpStatus.NO_CONTENT);
-            }
-
-            return new ResponseEntity<>(employees, HttpStatus.OK);
-        } catch (Exception ex) {
-            return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
-        }
+    @GetMapping("/getAll/{cnt_offset}")
+    public ResponseEntity<List<Employee>> getAll (@PathVariable String cnt_offset) {
+        return employeeService.getAll(cnt_offset);
     }
 
     @ApiOperation(value = "Get average employees' salary in company",
             response = Map.class,
             responseContainer = "Map<String, Object>")
     @ApiResponses(value = {
-            @ApiResponse(code = 500, message = "Internal server error")
+            @ApiResponse(code = 500, message = "Internal server error"),
+            @ApiResponse(code = 204, message = "No employees in database")
     })
-    @GetMapping("/getAvgCompanySalary")
-    public ResponseEntity<Map<String, Object>> getAvgCompanySalary() {
-        try {
-
-            Map<String, Object> avgCompanySalary = employeeMapper.getAvgCompanySalary();
-            return new ResponseEntity<>(avgCompanySalary, HttpStatus.OK);
-        } catch (Exception ex) {
-            return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
-        }
+    @GetMapping("/getAvgSalary/{cnt_offset}")
+    public ResponseEntity<Map<String, Object>> getAvgSalary(@PathVariable String cnt_offset) {
+        return employeeService.getAvgSalary(cnt_offset);
     }
 
-
-    @ApiOperation(value = "Get average employees' salary for departement",
+    @ApiOperation(value = "Get average employees' salary for every department",
             response = List.class,
             responseContainer = "List<Map<String, Object>>")
     @ApiResponses(value = {
-            @ApiResponse(code = 500, message = "Internal server error")
+            @ApiResponse(code = 500, message = "Internal server error"),
+            @ApiResponse(code = 204, message = "No employees in database")
     })
-    @GetMapping("/getAvgDepartementSalary")
-    public ResponseEntity<List<Map<String, Object>>> getAvgDepartementSalary() {
-        try {
-
-            List<Map<String, Object>> avgDepartementSalary = employeeMapper.getAvgDepartementSalary();
-            return new ResponseEntity<>(avgDepartementSalary, HttpStatus.OK);
-        } catch (Exception ex) {
-            return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
-        }
+    @GetMapping("/getAvgSalaryByDepartment/{cnt_offset}")
+    public ResponseEntity<List<Map<String, Object>>> getAvgSalaryByDepartment(@PathVariable String cnt_offset) {
+        return employeeService.getAvgSalaryByDepartment(cnt_offset);
     }
 
-    @ApiOperation(value = "Get average employees' salary for position",
+    @ApiOperation(value = "Get average employees' salary for every position",
             response = List.class,
             responseContainer = "List<Map<String, Object>>")
     @ApiResponses(value = {
-            @ApiResponse(code = 500, message = "Internal server error")
+            @ApiResponse(code = 500, message = "Internal server error"),
+            @ApiResponse(code = 204, message = "No employees in database")
     })
-    @GetMapping("/getAvgPositionSalary")
-    public ResponseEntity<List<Map<String, Object>>> getAvgPositionSalary() {
-        try {
-
-            List<Map<String, Object>> avgPositionSalary = employeeMapper.getAvgPositionSalary();
-            return new ResponseEntity<>(avgPositionSalary, HttpStatus.OK);
-        } catch (Exception ex) {
-            return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
-        }
+    @GetMapping("/getAvgSalaryByPosition/{cnt_offset}")
+    public ResponseEntity<List<Map<String, Object>>> getAvgSalaryByPosition(@PathVariable String cnt_offset) {
+        return employeeService.getAvgSalaryByPosition(cnt_offset);
     }
 
 }
