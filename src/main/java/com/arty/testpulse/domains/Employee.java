@@ -1,5 +1,7 @@
 package com.arty.testpulse.domains;
 
+import java.util.Objects;
+
 public class Employee
 {
     private Long id;
@@ -78,5 +80,40 @@ public class Employee
     public void setDepartment_name (String department_name)
     {
         this.department_name = department_name;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+
+        if (this == o)
+            return true;
+        if (!(o instanceof Employee))
+            return false;
+        Employee employee = (Employee) o;
+        return Objects.equals(this.id, employee.id)
+                && Objects.equals(this.name, employee.name)
+                && Objects.equals(this.position_id, employee.position_id)
+                && Objects.equals(this.department_id, employee.department_id)
+                && Objects.equals(this.department_name, employee.department_name)
+                && Objects.equals(this.salary, employee.salary);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(this.id, this.name,
+                this.position_id, this.department_id,
+                this.department_name, this.salary);
+    }
+
+    @Override
+    public String toString() {
+        return "Employee{"
+                + "id=" + this.id
+                + ", name='" + this.name + '\''
+                + ", position_id='" + this.position_id + '\''
+                + ", department_id='" + this.department_id + '\''
+                + ", department_name='" + this.department_name + '\''
+                + ", salary='" + this.salary + '\''
+                + '}';
     }
 }

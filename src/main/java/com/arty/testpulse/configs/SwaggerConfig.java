@@ -14,14 +14,12 @@ public class SwaggerConfig
 {
     @Bean
     public Docket api() {
-        return new Docket(DocumentationType.SWAGGER_2).groupName("public-api")
-                .apiInfo(apiInfo()).select().paths(PathSelectors.any()).build();
-
-        /*return new Docket(DocumentationType.SWAGGER_2)
+        return new Docket(DocumentationType.SWAGGER_2)
+                .groupName("test-pulse-api")
+                .apiInfo(apiInfo())
                 .select()
-                .apis(RequestHandlerSelectors.any())
                 .paths(PathSelectors.any())
-                .build();*/
+                .build();
     }
 
     private ApiInfo apiInfo() {
