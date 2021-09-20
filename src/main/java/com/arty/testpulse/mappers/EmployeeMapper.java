@@ -27,11 +27,8 @@ public interface EmployeeMapper
 	 * @return
 	 */
 	@Select("SELECT AVG(e.salary) as average_salary " +
-			"FROM employees e " +
-			"ORDER BY average_salary " +
-			"OFFSET #{cnt_offset} ROWS " +
-			"FETCH NEXT #{cnt_next} ROWS ONLY")
-	Map<String, Object> getAvgSalary(Integer cnt_offset, Integer cnt_next);
+			"FROM employees e ")
+	Map<String, Object> getAvgSalary();
 
 	/**
 	 * Get average salary by department

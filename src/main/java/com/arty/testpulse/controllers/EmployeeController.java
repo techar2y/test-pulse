@@ -43,9 +43,9 @@ public class EmployeeController
             @ApiResponse(code = 500, message = "Internal server error"),
             @ApiResponse(code = 204, message = "No employees in database")
     })
-    @GetMapping("/getAvgSalary/{cnt_offset}")
-    public ResponseEntity<Map<String, Object>> getAvgSalary(@PathVariable String cnt_offset) {
-        return employeeService.getAvgSalary(cnt_offset);
+    @GetMapping("/getAvgSalary")
+    public ResponseEntity<Map<String, Object>> getAvgSalary() {
+        return employeeService.getAvgSalary();
     }
 
     @ApiOperation(value = "Get average employees' salary for every department",

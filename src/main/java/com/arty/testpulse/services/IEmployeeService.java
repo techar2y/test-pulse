@@ -13,7 +13,7 @@ import java.util.Map;
 public interface IEmployeeService
 {
     ResponseEntity<List<Employee>> getAll(String cnt_offset);
-    ResponseEntity<Map<String, Object>> getAvgSalary(String cnt_offset);
+    ResponseEntity<Map<String, Object>> getAvgSalary();
     ResponseEntity<List<Map<String, Object>>> getAvgSalaryByDepartment(String cnt_offset);
     ResponseEntity<List<Map<String, Object>>> getAvgSalaryByPosition(String cnt_offset);
 }

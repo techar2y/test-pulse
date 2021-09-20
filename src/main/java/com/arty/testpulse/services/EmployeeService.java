@@ -43,14 +43,11 @@ public class EmployeeService implements IEmployeeService
     }
 
     @Override
-    public ResponseEntity<Map<String, Object>> getAvgSalary (String cnt_offset)
+    public ResponseEntity<Map<String, Object>> getAvgSalary ()
     {
         try {
 
-            Integer int_cnt_offset = Integer.parseInt(cnt_offset);
-            Integer int_cnt_next = int_cnt_offset + CNT_NEXT_OFFSET;
-
-            Map<String, Object> avgCompanySalary = employeeMapper.getAvgSalary(int_cnt_offset, int_cnt_next);
+            Map<String, Object> avgCompanySalary = employeeMapper.getAvgSalary();
             if(avgCompanySalary == null) {
                 return new ResponseEntity<>(HttpStatus.NO_CONTENT);
             }
