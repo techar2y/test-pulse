@@ -24,10 +24,6 @@ public class EmployeeController
     @Autowired
     IEmployeeService employeeService;
 
-    public String get(String name) {
-        return new StringBuilder(name + " me").toString();
-    }
-
     @ApiOperation(value = "Get all employees",
             response = List.class,
             responseContainer = "ResponseEntity<List<Employee>>")
